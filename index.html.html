@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRY OUT TKA DAERAH ISTIMEWA YOGYAKARTA - BAHASA INDONESIA PAKET 1</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#1d4ed8',
+                            600: '#1e40af',
+                            700: '#1d3557',
+                            800: '#0f172a',
+                        },
+                        paper: '#faf8f5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'Cambria', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .document-font { font-family: 'Merriweather', Georgia, serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-blue-200">
+
+    <!-- APP HEADER -->
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white shadow-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-amber-400 text-blue-950 p-2 rounded-lg font-black text-xl shadow-inner flex items-center justify-center w-10 h-10">
+                    DIY
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-bold tracking-wide uppercase leading-tight text-amber-300">
+                        TRY OUT TKA DAERAH ISTIMEWA YOGYAKARTA
+                    </h1>
+                    <p class="text-xs md:text-sm text-slate-200 font-medium">BAHASA INDONESIA - PAKET 1</p>
+                </div>
+            </div>
+            
+            <!-- User Status & Timer Badge (Hidden in Welcome Screen) -->
+            <div id="header-quiz-meta" class="hidden flex items-center space-x-3">
+                <div class="bg-blue-950/60 backdrop-blur border border-blue-400/30 px-3 py-1.5 rounded-lg flex items-center space-x-2 text-xs md:text-sm">
+                    <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span id="quiz-timer" class="font-mono font-bold text-amber-300">00:00</span>
+                </div>
+                <div class="hidden sm:flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-lg text-xs md:text-sm">
+                    <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span id="display-participant-name" class="font-medium truncate max-w-[120px]">Peserta</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow flex flex-col max-w-7xl w-full mx-auto p-3 md:p-6">
+
+        <!-- ==================== SCREEN 1: WELCOME & REGISTRATION ==================== -->
+        <section id="screen-welcome" class="m-auto w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden transition-all my-auto">
+            <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-6 text-white text-center">
+                <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-3 backdrop-blur-sm">
+                    <svg class="w-8 h-8 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <h2 class="text-xl md:text-2xl font-bold tracking-tight">TRY OUT TKA DIY - PAKET 1</h2>
+                <p class="text-blue-100 text-sm mt-1">Mata Pelajaran: Bahasa Indonesia (10 Soal Resmi)</p>
+            </div>
+
+            <div class="p-6 md:p-8 space-y-6">
+                <!-- Instruction Box -->
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-amber-900 text-xs md:text-sm space-y-1">
+                    <p class="font-bold flex items-center">
+                        <svg class="w-4 h-4 mr-1.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Petunjuk Pengerjaan:
+                    </p>
+                    <ul class="list-disc list-inside space-y-0.5 text-slate-700 pl-1">
+                        <li>Soal terdiri dari 10 nomor dengan bentuk Pilihan Ganda, Pilihan Ganda Kompleks, dan Benar/Salah.</li>
+                        <li>Wacana / Teks disediakan di sebelah soal pada layar PC atau bagian atas pada HP.</li>
+                        <li>Isi nama lengkap Anda sebelum memulai ujian.</li>
+                        <li>Skor dan pembahasan lengkap akan ditayangkan setelah ujian dikirimkan.</li>
+                    </ul>
+                </div>
+
+                <!-- Registration Form -->
+                <form id="form-registration" onsubmit="startQuiz(event)" class="space-y-4">
+                    <div>
+                        <label for="input-name" class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap Peserta <span class="text-red-500">*</span></label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                            </span>
+                            <input type="text" id="input-name" required placeholder="Masukkan nama Anda..." class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition text-slate-900 font-medium">
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center space-x-2">
+                            <span>Mulai Pengerjaan</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                        <button type="button" onclick="showLeaderboardScreen()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-3.5 px-5 rounded-xl border border-slate-300 transition flex items-center justify-center space-x-2">
+                            <svg class="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <span>Daftar Peringkat</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ==================== SCREEN 2: QUIZ INTERFACE ==================== -->
+        <section id="screen-quiz" class="hidden flex-grow flex flex-col gap-4">
+            
+            <!-- Top Controls & Progress Bar -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-3 md:p-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="flex items-center justify-between w-full sm:w-auto gap-3">
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded-md">Soal <span id="current-q-num">1</span> dari 10</span>
+                        <span id="badge-q-type" class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-md border border-slate-200">Pilihan Ganda</span>
+                    </div>
+                    <!-- Mobile Stimulus Drawer Toggle -->
+                    <button onclick="toggleMobileStimulus()" class="lg:hidden bg-indigo-50 text-indigo-700 hover:bg-indigo-100 text-xs font-semibold px-3 py-1.5 rounded-lg border border-indigo-200 flex items-center space-x-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span id="btn-text-stimulus">Buka Wacana</span>
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="w-full sm:w-64 flex flex-col space-y-1">
+                    <div class="flex justify-between text-xs text-slate-500 font-medium">
+                        <span>Kemajuan Jawab</span>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                        <div id="progress-bar-fill" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Main Workspace Split Pane -->
+            <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                
+                <!-- LEFT PANE: DOCUMENT STIMULUS (WACANA) -->
+                <div id="stimulus-container" class="hidden lg:block lg:col-span-6 bg-paper rounded-2xl shadow-md border border-amber-900/10 p-5 md:p-6 overflow-y-auto max-h-[72vh] custom-scrollbar">
+                    <div class="border-b-2 border-dashed border-amber-900/20 pb-3 mb-4 flex justify-between items-center">
+                        <span class="text-xs font-bold tracking-widest text-amber-900/60 uppercase">DOKUMEN WACANA BACAAN</span>
+                        <span class="text-xs font-semibold text-slate-500 bg-white/80 px-2 py-0.5 rounded border border-slate-200">Soal <span id="stimulus-q-range">1-3</span></span>
+                    </div>
+                    <div id="stimulus-content" class="document-font text-slate-800 text-sm leading-relaxed space-y-4">
+                        <!-- Dynamic Reading Text Content Here -->
+                    </div>
+                </div>
+
+                <!-- RIGHT PANE: QUESTION & OPTIONS -->
+                <div class="lg:col-span-6 flex flex-col space-y-4">
+                    
+                    <!-- Question Card -->
+                    <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-5 md:p-6 space-y-5">
+                        
+                        <!-- Question Text -->
+                        <div id="question-text" class="text-slate-900 font-semibold text-base md:text-lg leading-snug">
+                            <!-- Question text injected here -->
+                        </div>
+
+                        <!-- Answer Input Options -->
+                        <div id="options-container" class="space-y-3 pt-2">
+                            <!-- Dynamic Answer Options (Radio, Checkbox, or Table) -->
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Action Bar -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-3.5 flex items-center justify-between gap-2">
+                        <button onclick="prevQuestion()" id="btn-prev" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm rounded-lg transition flex items-center space-x-1 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span>Sebelumnya</span>
+                        </button>
+
+                        <div class="flex items-center space-x-2">
+                            <button onclick="nextQuestion()" id="btn-next" class="px-5 py-2 bg-blue-700 hover:bg-blue-800 text-white font-semibold text-sm rounded-lg shadow transition flex items-center space-x-1">
+                                <span>Selanjutnya</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <button onclick="confirmSubmitQuiz()" id="btn-submit" class="hidden px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-lg shadow transition flex items-center space-x-1">
+                                <span>Kirim Jawaban</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question Number Navigation Grid -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4">
+                        <div class="flex justify-between items-center mb-2.5">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Navigasi Nomor Soal</span>
+                            <span class="text-xs text-slate-400">Klik nomor untuk melompat</span>
+                        </div>
+                        <div id="grid-nav-numbers" class="grid grid-cols-5 sm:grid-cols-10 gap-2">
+                            <!-- 10 buttons dynamically generated -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== SCREEN 3: RESULTS & EXPLANATION ==================== -->
+        <section id="screen-result" class="hidden flex-grow flex flex-col space-y-6">
+            
+            <!-- Result Banner Card -->
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 p-6 md:p-8 text-white text-center relative">
+                    <div class="max-w-md mx-auto space-y-3">
+                        <div class="inline-block p-3 bg-white/10 rounded-full backdrop-blur">
+                            <span class="text-4xl">🏆</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black">HASIL TRY OUT TKA DIY</h2>
+                        <p class="text-blue-200 text-sm">Bahasa Indonesia Paket 1 • Nama Peserta: <span id="result-name" class="font-bold text-amber-300"></span></p>
+
+                        <!-- Score Gauge Circle -->
+                        <div class="py-4">
+                            <div class="inline-flex flex-col items-center justify-center w-32 h-32 md:w-36 md:h-36 bg-white text-slate-900 rounded-full shadow-2xl border-4 border-amber-400">
+                                <span class="text-xs font-bold uppercase tracking-widest text-slate-400">SKOR AKHIR</span>
+                                <span id="result-score" class="text-4xl md:text-5xl font-black text-blue-700">0</span>
+                                <span class="text-xs text-slate-500 font-semibold">DARI 100</span>
+                            </div>
+                        </div>
+
+                        <p id="result-feedback" class="text-sm font-medium text-amber-200 bg-white/10 py-1.5 px-4 rounded-full inline-block">
+                            Kerja bagus! Terus tingkatkan prestasi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="grid grid-cols-3 divide-x divide-slate-200 bg-slate-50 border-b border-slate-200 text-center py-4">
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Jawaban Benar</p>
+                        <p id="stat-correct" class="text-xl md:text-2xl font-bold text-emerald-600">0</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Jawaban Salah</p>
+                        <p id="stat-wrong" class="text-xl md:text-2xl font-bold text-rose-600">0</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-500 uppercase">Waktu Tempuh</p>
+                        <p id="stat-time" class="text-xl md:text-2xl font-bold text-slate-700">00:00</p>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-white flex flex-wrap justify-center gap-3">
+                    <button onclick="showLeaderboardScreen()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-5 py-2.5 rounded-xl shadow transition flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <span>Lihat Papan Peringkat</span>
+                    </button>
+                    <button onclick="resetAndRestart()" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-5 py-2.5 rounded-xl shadow transition flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        <span>Ulangi Try Out</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Review / Explanations List -->
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-5 md:p-6 space-y-6">
+                <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center">
+                        <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                        Pembahasan Detail Per Nomor Soal
+                    </h3>
+                    <span class="text-xs text-slate-500 font-medium">10 Soal Evaluasi</span>
+                </div>
+
+                <div id="review-list-container" class="space-y-6">
+                    <!-- Dynamic review items generated by JS -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== SCREEN 4: LEADERBOARD ==================== -->
+        <section id="screen-leaderboard" class="hidden flex-grow flex flex-col space-y-5">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-800 to-indigo-900 p-6 text-white flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold flex items-center">
+                            <span class="mr-2">🏆</span> DAFTAR PERINGKAT PESERTA
+                        </h2>
+                        <p class="text-blue-200 text-xs md:text-sm mt-0.5">TRY OUT TKA DAERAH ISTIMEWA YOGYAKARTA - PAKET 1</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="showWelcomeScreen()" class="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-4 py-2 rounded-lg border border-white/20 transition">
+                            Kembali ke Beranda
+                        </button>
+                        <button onclick="clearLeaderboard()" class="bg-rose-500/20 hover:bg-rose-500/30 text-rose-200 font-medium text-xs px-3 py-2 rounded-lg border border-rose-400/30 transition">
+                            Hapus Riwayat
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-4 md:p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="bg-slate-100 text-slate-600 font-semibold border-b border-slate-200">
+                                    <th class="py-3 px-4 rounded-l-lg">Peringkat</th>
+                                    <th class="py-3 px-4">Nama Peserta</th>
+                                    <th class="py-3 px-4 text-center">Skor</th>
+                                    <th class="py-3 px-4 text-center">Waktu Pengerjaan</th>
+                                    <th class="py-3 px-4 rounded-r-lg text-right">Tanggal & Jam</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-table-body" class="divide-y divide-slate-100">
+                                <!-- Dynamic leaderboard rows -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="leaderboard-empty" class="hidden text-center py-12 text-slate-400">
+                        <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        <p class="font-medium">Belum ada data pengerjaan.</p>
+                        <p class="text-xs">Jadilah yang pertama mengerjakan tryout ini!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-3 text-center text-xs text-slate-500">
+        <p>© 2026 Try Out TKA Daerah Istimewa Yogyakarta - Bahasa Indonesia Paket 1</p>
+    </footer>
+
+    <!-- JAVASCRIPT APP LOGIC -->
+    <script>
+        /* ==================== DATA SOAL RESMI (10 NUMBERS) ==================== */
+        const quizData = [
+            {
+                id: 1,
+                stimulusId: "text-1",
+                stimulusRange: "1—3",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: "1. Objek apa yang ditemukan di titik pertama pencarian?",
+                options: [
+                    { key: "A", text: "mobil" },
+                    { key: "B", text: "sepeda" },
+                    { key: "C", text: "angkong" },
+                    { key: "D", text: "sepeda motor" }
+                ],
+                correctAnswer: "D",
+                explanation: "Berdasarkan paragraf ke-4 teks wacana: <i>'Pada titik pertama pencarian, terlihat benda roda dua dengan dua kaca spion. Tercium bau bensin yang menyengat akibat dari kebocoran tangki.'</i> Ciri-ciri roda dua yang memiliki kaca spion serta bensin menunjukkan objek tersebut adalah <b>sepeda motor</b> (Jawaban D)."
+            },
+            {
+                id: 2,
+                stimulusId: "text-1",
+                stimulusRange: "1—3",
+                type: "multiple",
+                typeLabel: "Pilihan Ganda Kompleks",
+                question: "2. Manakah perubahan latar pada teks tersebut? Pilihlah jawaban yang benar! Jawaban benar lebih dari satu.",
+                options: [
+                    { id: "opt2_1", text: "Malam hari menjadi pagi hari", correct: true },
+                    { id: "opt2_2", text: "Jalan amblas menjadi tanah retak", correct: false },
+                    { id: "opt2_3", text: "Suasana tenang menjadi mencekam", correct: true }
+                ],
+                correctAnswer: ["opt2_1", "opt2_3"],
+                explanation: "Perubahan latar yang terjadi dalam bacaan adalah:<br>1. <b>Malam hari menjadi pagi hari</b> (Terbukti dari kalimat: <i>'Kamis, 13 November 2025, ketenangan malam...'</i> lalu berlanjut ke <i>'Jumat pagi, terlihat banyak kerusakan...'</i>).<br>2. <b>Suasana tenang menjadi mencekam</b> (Terbukti dari <i>'ketenangan malam... seketika sirna... Warga sangat ketakutan'</i>).<br>Sedangkan <i>'jalan amblas'</i> dan <i>'tanah retak'</i> adalah dua kerusakan berbeda, bukan perubahan latar."
+            },
+            {
+                id: 3,
+                stimulusId: "text-1",
+                stimulusRange: "1—3",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: `3. Perhatikan tanggapan Fany dan Nafisa setelah membaca teks tersebut!
+                <div class="my-3 p-3 bg-amber-50/80 border border-amber-200 rounded-lg text-xs md:text-sm font-sans space-y-2 text-slate-800">
+                    <p><b>Fany</b> : <i>“Sebenarnya tanda-tanda akan terjadi bencana sudah ada. Masyarakat sekitar bisa mengantisipasinya dengan menyelamatkan benda-benda berharga. Dengan begitu, kerusakan-kerusakan dapat berkurang.”</i></p>
+                    <p><b>Nafisa</b> : <i>“Bencana alam tidak dapat diprediksi kapan datangnya. Jadi, sudah pasti akan banyak kerusakan di mana-mana. Masyarakat hanya bisa berserah diri.”</i></p>
+                </div>
+                Mengapa pendapat Fany lebih sesuai berdasarkan cerita tersebut daripada pendapat Nafisa?`,
+                options: [
+                    { key: "A", text: "Nafisa menyadari bahwa masyarakat hanya bisa pasrah apabila terjadi bencana alam." },
+                    { key: "B", text: "Fany memahami bahwa dengan sikap siaga bencana, dapat mengurangi dampak buruk bencana alam." },
+                    { key: "C", text: "Fany mengetahui bahwa dengan menyelamatkan benda berharga, tidak terjadi kerugian akibat bencana." },
+                    { key: "D", text: "Nafisa meyakini bahwa bencana alam pasti menimbulkan kerusakan sehingga masyarakat harus menerimanya." }
+                ],
+                correctAnswer: "B",
+                explanation: "Dalam bacaan disebutkan bahwa sudah ada tanda-tanda pergerakan tanah sebelum longsor (jalan amblas dan retakan). Pendapat Fany lebih tepat karena menekankan pentingnya sikap siaga dan antisipasi bencana untuk mengurangi dampak buruk (Jawaban B)."
+            },
+            {
+                id: 4,
+                stimulusId: "text-2",
+                stimulusRange: "4—6",
+                type: "multiple",
+                typeLabel: "Pilihan Ganda Kompleks",
+                question: "4. Manakah yang merupakan kosakata khusus di bidang pertanian?",
+                options: [
+                    { id: "opt4_1", text: "sampah anorganik", correct: false },
+                    { id: "opt4_2", text: "pupuk organik", correct: true },
+                    { id: "opt4_3", text: "tanah humus", correct: true }
+                ],
+                correctAnswer: ["opt4_2", "opt4_3"],
+                explanation: "Kosakata khusus bidang pertanian adalah kata/istilah teknis yang spesifik digunakan dalam ilmu atau dunia pertanian, yaitu <b>pupuk organik</b> dan <b>tanah humus</b>. Istilah <i>sampah anorganik</i> merupakan kosakata umum di bidang lingkungan/kebersihan."
+            },
+            {
+                id: 5,
+                stimulusId: "text-2",
+                stimulusRange: "4—6",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: "5. Apa makna ungkapan yang bercetak tebal (<i>“sekali mendayung, dua tiga pulau terlampaui”</i>) dalam teks laporan tersebut?",
+                options: [
+                    { key: "A", text: "melakukan kegiatan dengan tenaga yang sangat besar" },
+                    { key: "B", text: "melakukan satu kegiatan yang memberi banyak manfaat" },
+                    { key: "C", text: "melakukan kegiatan di beberapa tempat secara bersamaan" },
+                    { key: "D", text: "melakukan kegiatan secara berulang-ulang dalam waktu lama" }
+                ],
+                correctAnswer: "B",
+                explanation: "Peribahasa/ungkapan <i>'Sekali mendayung, dua tiga pulau terlampaui'</i> bermakna melakukan satu pekerjaan atau tindakan tetapi memperoleh beberapa hasil/manfaat sekaligus. Sesuai laporan: pengolahan maggot mengurangi sampah sekaligus menghasilkan pupuk (Jawaban B)."
+            },
+            {
+                id: 6,
+                stimulusId: "text-2",
+                stimulusRange: "4—6",
+                type: "table_tf",
+                typeLabel: "Benar / Salah",
+                question: "6. Manakah pernyataan berikut yang sesuai dengan teks tersebut? Tentukan benar atau salah untuk setiap pernyataan berikut!",
+                statements: [
+                    { id: "st6_1", text: "Pengelolaan sampah menggunakan maggot dapat mengurangi jumlah sampah sekaligus menghasilkan pupuk organik.", correct: "Benar" },
+                    { id: "st6_2", text: "Selama proses pengolahan, kondisi lingkungan di sekitar tempat pengelolaan tidak mengalami perubahan yang berarti.", correct: "Salah" },
+                    { id: "st6_3", text: "Pemanfaatan maggot membuat sampah organik memiliki nilai guna bagi lingkungan.", correct: "Benar" }
+                ],
+                correctAnswer: { st6_1: "Benar", st6_2: "Salah", st6_3: "Benar" },
+                explanation: "Evaluasi Pernyataan:<br>1. <b>Benar</b>: Sesuai isi laporan hasil pengamatan.<br>2. <b>Salah</b>: Lingkungan mengalami perubahan berarti, seperti bau tidak sedap yang berkurang dan dihasilkannya pupuk kaya nutrisi.<br>3. <b>Benar</b>: Sampah organik menjadi bernilai guna karena diubah menjadi pupuk yang menyuburkan tanaman."
+            },
+            {
+                id: 7,
+                stimulusId: "text-3",
+                stimulusRange: "7—9",
+                type: "multiple",
+                typeLabel: "Pilihan Ganda Kompleks",
+                question: "7. Berdasarkan teks pidato tersebut, manakah yang merupakan kosakata umum? Pilihlah jawaban yang benar! Jawaban benar lebih dari satu.",
+                options: [
+                    { id: "opt7_1", text: "buku", correct: true },
+                    { id: "opt7_2", text: "komik", correct: false },
+                    { id: "opt7_3", text: "gawai", correct: true }
+                ],
+                correctAnswer: ["opt7_1", "opt7_3"],
+                explanation: "Kosakata umum adalah kata-kata yang digunakan secara luas oleh masyarakat dalam berbagai bidang kehidupan sehari-hari tanpa terbatas pada jenis/kategori tertentu. Dalam konteks ini, kata <b>buku</b> dan <b>gawai</b> termasuk kosakata umum, sedangkan <i>komik</i> merujuk spesifik pada jenis buku cerita bergambar."
+            },
+            {
+                id: 8,
+                stimulusId: "text-3",
+                stimulusRange: "7—9",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: "8. Apa makna ungkapan yang dicetak tebal (<i>“ujung tombak”</i>) pada teks pidato tersebut?",
+                options: [
+                    { key: "A", text: "pemimpin hebat yang bekerja keras di balik layar tanpa terlihat" },
+                    { key: "B", text: "seseorang yang memimpin sebuah kelompok agar bisa bekerja sama" },
+                    { key: "C", text: "kelompok yang berada di baris depan dan menjadi penggerak utama" },
+                    { key: "D", text: "kelompok terdepan yang bekerja sama untuk mendapatkan keuntungan" }
+                ],
+                correctAnswer: "C",
+                explanation: "Ungkapan <b>ujung tombak</b> berarti pihak atau kelompok yang berada paling depan untuk memelopori, menggerakkan, atau menentukan keberhasilan suatu usaha/kemajuan bangsa (Jawaban C)."
+            },
+            {
+                id: 9,
+                stimulusId: "text-3",
+                stimulusRange: "7—9",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: `9. Perhatikan pernyataan Yema dan Alea berikut!
+                <div class="my-3 p-3 bg-blue-50/80 border border-blue-200 rounded-lg text-xs md:text-sm font-sans space-y-1.5 text-slate-800">
+                    <p><b>Yema</b> : <i>“Rendahnya minat baca disebabkan oleh generasi muda yang menguasai teknologi seperti gawai.”</i></p>
+                    <p><b>Alea</b> : <i>“Jika minat baca generasi muda meningkat maka bangsa Indonesia akan menjadi bangsa yang maju”</i></p>
+                </div>
+                Dari kedua pernyataan tersebut, manakah yang sesuai dengan informasi dalam teks?`,
+                options: [
+                    { key: "A", text: "pernyataan Yema karena mencari informasi melalui gawai akan lebih cepat" },
+                    { key: "B", text: "pernyataan Alea karena generasi muda berwawasan luas dan menguasai teknologi" },
+                    { key: "C", text: "pernyataan Yema karena dengan gawai, informasi dapat diperoleh tanpa membaca buku" },
+                    { key: "D", text: "pernyataan Alea karena generasi muda yang berwawasan luas dapat memajukan bangsa" }
+                ],
+                correctAnswer: "D",
+                explanation: "Pernyataan Alea paling sesuai dengan penutup teks pidato yang menyatakan: <i>'Generasi muda yang berwawasan luas (melalui membaca) menjadi ujung tombak majunya sebuah bangsa'</i> (Jawaban D)."
+            },
+            {
+                id: 10,
+                stimulusId: "text-4",
+                stimulusRange: "10",
+                type: "single",
+                typeLabel: "Pilihan Ganda",
+                question: "10. Apa makna ungkapan yang dicetak tebal (<i>“naik pitam”</i>) pada teks surat tersebut?",
+                options: [
+                    { key: "A", text: "cuek" },
+                    { key: "B", text: "marah" },
+                    { key: "C", text: "kecewa" },
+                    { key: "D", text: "khawatir" }
+                ],
+                correctAnswer: "B",
+                explanation: "Ungkapan <b>naik pitam</b> merupakan kiasan yang berarti <b>marah</b> atau menjadi sangat emosi (Jawaban B)."
+            }
+        ];
+
+        /* ==================== STIMULUS READINGS TEXT (WACANA) ==================== */
+        const stimuliTexts = {
+            "text-1": `
+                <div class="text-center font-bold text-base md:text-lg mb-4 text-slate-900 border-b border-amber-900/20 pb-2">
+                    Tragedi Longsor Cibeunying
+                </div>
+                <p class="indent-6">Kamis, 13 November 2025, ketenangan malam di <span class="border-b-2 border-rose-500 font-medium">Cibeunying, Majenang, Cilacap</span>, seketika <span class="border-b-2 border-rose-500 font-medium">sirna</span>. Sekitar pukul 20.00 WIB, bencana tanah longsor besar terjadi. Warga sangat ketakutan. Terdengar suara gemuruh disusul bunyi patahan batang kayu, mirip suara pesawat terbang. Tiba-tiba material tanah bergerak cepat menerjang pemukiman.</p>
+                <p class="indent-6">Menurut Kepala Desa Cibeunying, sudah ada tanda pergerakan tanah berupa jalan amblas. Jalan ini berada di perbatasan Dusun <span class="border-b-2 border-rose-500 font-medium">Cibuyut</span> dan <span class="border-b-2 border-rose-500 font-medium">Nagari</span>. Selain itu, sudah muncul retakan tanah di area perbukitan Cibeunying. Retakan ini semakin melebar akibat hujan deras yang <span class="border-b-2 border-rose-500 font-medium">mengguyur</span> sejak sore hari.</p>
+                <p class="indent-6">Jumat pagi, terlihat banyak kerusakan alam dan infrastruktur. Pepohonan tumbang berserakan. Lahan runtuh menutupi apa saja yang berada di bawah lereng. Sebanyak 16 rumah tertimbun material longsor.</p>
+                <p class="indent-6">Beberapa alat berat diterjunkan untuk mencari korban yang tertimbun. Selama proses pencarian, petugas menemukan banyak benda yang tertimbun. Pada titik pertama pencarian, terlihat benda roda dua dengan dua kaca spion. Tercium bau bensin yang menyengat akibat dari kebocoran tangki. Di titik lain, petugas juga menemukan hewan-hewan ternak. Akhirnya, satu per satu korban ditemukan.</p>
+            `,
+            "text-2": `
+                <div class="text-center font-bold text-base md:text-lg mb-3 text-slate-900">
+                    Laporan Hasil Pengamatan
+                </div>
+                <div class="bg-white/70 p-3 rounded-lg border border-amber-900/10 space-y-1 text-xs md:text-sm mb-4">
+                    <p><b>Judul:</b> Pengelolaan Sampah Organik Menjadi Pupuk Menggunakan <i>Maggot</i></p>
+                    <p><b>Waktu Pengamatan:</b> Senin, 12 Januari 2026</p>
+                    <p><b>Tempat Pengamatan:</b> Tempat Pengelolaan Sampah Terpadu (TPST)</p>
+                    <p><b>Tujuan Pengamatan:</b> Mengetahui proses pengelolaan sampah organik menjadi pupuk organik menggunakan <i>maggot</i>.</p>
+                    <p><b>Alat dan Bahan:</b> Bak pengolahan, sampah organik rumah tangga, <i>maggot</i> (larva lalat Black Soldier Fly), dan penutup bak.</p>
+                </div>
+                <p class="font-bold text-slate-900 mb-1">Hasil Pengamatan:</p>
+                <p class="indent-6">Berdasarkan hasil pengamatan di TPST, sampah organik harus <span class="border-b-2 border-rose-500 font-medium">dipilah</span> terlebih dahulu dari sampah anorganik. Sampah organik kemudian dimasukkan ke dalam bak pengolahan dan diberi <i>maggot</i>. <i>Maggot</i> memakan sampah dengan cepat sehingga jumlah sampah berkurang secara signifikan. Bau tidak sedap yang awalnya muncul lama-kelamaan berkurang. Sisa hasil <span class="border-b-2 border-rose-500 font-medium">penguraian</span> berubah menjadi pupuk organik berwarna coklat kehitaman dan bertekstur remah. Pupuk ini meningkatkan kandungan nutrisi tanah humus sehingga tanaman menjadi subur. Proses ini dapat dikatakan <b>“sekali mendayung, dua tiga pulau terlampaui”</b>. Penggunaan <i>maggot</i> dapat mengurangi sampah sekaligus menghasilkan pupuk yang berguna.</p>
+                <p class="font-bold text-slate-900 mt-3 mb-1">Kesimpulan:</p>
+                <p>Pengelolaan sampah organik menggunakan <i>maggot</i> efektif, ramah lingkungan, serta bermanfaat bagi kehidupan.</p>
+            `,
+            "text-3": `
+                <div class="border-2 border-slate-800 p-4 rounded-lg bg-white">
+                    <div class="text-center font-bold text-base md:text-lg mb-3 text-slate-900 border-b pb-2">
+                        Ciptakan Bangsa yang Kuat dengan Gemar Membaca
+                    </div>
+                    <p class="indent-6">Teman-teman tentu pernah mendengar bahwa “Buku adalah Jendela Dunia”. Sebuah kalimat sarat makna yang seharusnya memotivasi kita untuk suka membaca buku. Namun, saat ini minat baca di Indonesia masih terbilang rendah. <span class="text-blue-700 bg-blue-50 px-1 rounded font-medium">Banyak diantara kita yang lebih memilih berlama-lama bermain gim di gawai dibandingkan membaca buku. Beberapa jenis gawai yang populer untuk bermain gim yaitu laptop, smartphone, dan tablet.</span></p>
+                    <p class="indent-6 mt-3">Membaca buku memiliki banyak manfaat. Dengan membaca buku kita dapat meningkatkan wawasan. Membaca buku juga membantu kita lebih konsentrasi dan meningkatkan daya ingat. Selain itu dapat menjaga kesehatan mental karena terbukti meredakan kecemasan.</p>
+                    <p class="indent-6 mt-3">Banyak upaya yang bisa kita lakukan untuk membangun kebiasaan membaca buku. Pada permulaan, kita bisa memilih bacaan ringan yang menarik. Misalnya, komik, cerpen, atau majalah untuk dibaca. Tak perlu terlalu lama dulu. Kita bisa memulai dari sepuluh menit setiap hari. Pilih tempat yang tenang dan nyaman untuk membaca agar kita tak mudah jenuh. Lakukan kebiasaan ini dengan rutin setiap hari. Dengan begitu, perlahan kebiasaan gemar membaca akan terbentuk dalam diri kita.</p>
+                    <p class="indent-6 mt-3">Mari teman-teman kita wujudkan bangsa Indonesia yang kuat dengan gemar membaca. Generasi muda yang berwawasan luas menjadi <b>ujung tombak</b> majunya sebuah bangsa.</p>
+                    <p class="text-xs text-slate-500 mt-3 italic">Sumber: Dari berbagai sumber</p>
+                </div>
+            `,
+            "text-4": `
+                <div class="border-2 border-slate-800 p-4 rounded-lg bg-white space-y-3">
+                    <div class="text-right text-xs md:text-sm font-medium">Yogyakarta, 22 Desember 2025</div>
+                    <div>
+                        <p>Untuk Ibu,</p>
+                        <p>di Jakarta</p>
+                    </div>
+                    <p class="indent-6">Hai, Ibu! Bagaimana kabarnya? Vina, Dito, Nenek, dan Kakek di sini sehat dan bahagia. Aku harap Ibu di sana juga begitu. Oh, iya, kami mau mengucapkan Selamat Hari Ibu. Terima kasih sudah melahirkan kami. Pokoknya, Ibu adalah ibu terbaik di dunia.</p>
+                    <p class="indent-6">Bu, setiap akhir pekan kami berempat berkebun, lho. Kakek mengajak kami menanam berbagai tanaman yang bisa dimanfaatkan. Nenek senang sekali karena banyak tanaman sayur yang dapat dipetik untuk dimasak. Kami sering diajak Nenek memetik sawi, bayam, dan tomat. Nenek bisa <b>naik pitam</b> kalau ayam tetangga memakan sayuran yang kami tanam. Ibu tidak perlu khawatir. Kami di sini tidak mungkin kekurangan gizi dan kelaparan, he-he.</p>
+                    <p class="indent-6">Ibu jadi ambil cuti saat ulang tahunku nanti, kan? Vina sangat ingin merayakan ulang tahun dengan makan bersama di restoran. Vina dan Dito juga kangen tidur dan bercanda di sofa kesayangan kita. <span class="text-blue-700 bg-blue-50 px-1 rounded">Sekian dulu surat dari kami, Bu. Sampai jumpa pada hari ulang tahunku.</span></p>
+                    <div class="pt-2">
+                        <p>Salam kangen,</p>
+                        <p class="font-bold">Vina dan Dito</p>
+                    </div>
+                </div>
+            `
+        };
+
+        /* ==================== STATE MANAGEMENT ==================== */
+        let participantName = "";
+        let currentQuestionIndex = 0;
+        let userAnswers = {}; // Map of question id -> answer data
+        let timerInterval = null;
+        let elapsedSeconds = 0;
+        let mobileStimulusOpen = false;
+
+        /* ==================== LIFECYCLE FUNCTIONS ==================== */
+        function startQuiz(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById('input-name').value.trim();
+            if (!nameInput) return;
+
+            participantName = nameInput;
+            document.getElementById('display-participant-name').innerText = participantName;
+            
+            // Reset State
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            elapsedSeconds = 0;
+
+            // Show Quiz UI
+            document.getElementById('screen-welcome').classList.add('hidden');
+            document.getElementById('screen-leaderboard').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            document.getElementById('header-quiz-meta').classList.remove('hidden');
+
+            startTimer();
+            renderQuestionNav();
+            loadQuestion(currentQuestionIndex);
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                elapsedSeconds++;
+                const mins = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+                const secs = String(elapsedSeconds % 60).padStart(2, '0');
+                document.getElementById('quiz-timer').innerText = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        /* ==================== QUESTION RENDERING ==================== */
+        function loadQuestion(index) {
+            currentQuestionIndex = index;
+            const qData = quizData[index];
+
+            // Update Meta & Progress
+            document.getElementById('current-q-num').innerText = index + 1;
+            document.getElementById('badge-q-type').innerText = qData.typeLabel;
+            document.getElementById('stimulus-q-range').innerText = qData.stimulusRange;
+
+            // Load Stimulus Content
+            const stimulusContainer = document.getElementById('stimulus-content');
+            stimulusContainer.innerHTML = stimuliTexts[qData.stimulusId] || "<p>Tidak ada wacana khusus.</p>";
+
+            // Question Text
+            document.getElementById('question-text').innerHTML = qData.question;
+
+            // Render Options Container
+            const optionsBox = document.getElementById('options-container');
+            optionsBox.innerHTML = '';
+
+            if (qData.type === 'single') {
+                renderSingleChoiceOptions(qData, optionsBox);
+            } else if (qData.type === 'multiple') {
+                renderMultipleChoiceOptions(qData, optionsBox);
+            } else if (qData.type === 'table_tf') {
+                renderTableTFOptions(qData, optionsBox);
+            }
+
+            // Update Navigation Buttons Status
+            document.getElementById('btn-prev').disabled = index === 0;
+            if (index === quizData.length - 1) {
+                document.getElementById('btn-next').classList.add('hidden');
+                document.getElementById('btn-submit').classList.remove('hidden');
+            } else {
+                document.getElementById('btn-next').classList.remove('hidden');
+                document.getElementById('btn-submit').classList.add('hidden');
+            }
+
+            updateQuestionNavHighlight();
+            updateProgressBar();
+        }
+
+        function renderSingleChoiceOptions(qData, container) {
+            const currentSelected = userAnswers[qData.id] || null;
+
+            qData.options.forEach(opt => {
+                const isChecked = currentSelected === opt.key;
+                const optEl = document.createElement('label');
+                optEl.className = `flex items-start p-3.5 rounded-xl border transition cursor-pointer select-none ${
+                    isChecked ? 'border-blue-600 bg-blue-50/70 shadow-sm ring-1 ring-blue-600' : 'border-slate-200 hover:bg-slate-50'
+                }`;
+                optEl.innerHTML = `
+                    <input type="radio" name="q_${qData.id}" value="${opt.key}" ${isChecked ? 'checked' : ''} 
+                        onchange="saveSingleAnswer(${qData.id}, '${opt.key}')" 
+                        class="mt-1 w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                    <span class="ml-3 font-semibold text-slate-700 w-5">${opt.key}.</span>
+                    <span class="text-slate-800 font-medium text-sm md:text-base">${opt.text}</span>
+                `;
+                container.appendChild(optEl);
+            });
+        }
+
+        function renderMultipleChoiceOptions(qData, container) {
+            const currentSelected = userAnswers[qData.id] || [];
+
+            qData.options.forEach(opt => {
+                const isChecked = currentSelected.includes(opt.id);
+                const optEl = document.createElement('label');
+                optEl.className = `flex items-center p-3.5 rounded-xl border transition cursor-pointer select-none ${
+                    isChecked ? 'border-blue-600 bg-blue-50/70 shadow-sm ring-1 ring-blue-600' : 'border-slate-200 hover:bg-slate-50'
+                }`;
+                optEl.innerHTML = `
+                    <input type="checkbox" value="${opt.id}" ${isChecked ? 'checked' : ''} 
+                        onchange="saveMultipleAnswer(${qData.id}, '${opt.id}', this.checked)" 
+                        class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                    <span class="ml-3 text-slate-800 font-medium text-sm md:text-base">${opt.text}</span>
+                `;
+                container.appendChild(optEl);
+            });
+        }
+
+        function renderTableTFOptions(qData, container) {
+            const userAnswersObj = userAnswers[qData.id] || {};
+
+            let tableHtml = `
+                <div class="overflow-x-auto border border-slate-200 rounded-xl">
+                    <table class="w-full text-left text-xs md:text-sm">
+                        <thead class="bg-slate-100 text-slate-700 font-bold">
+                            <tr>
+                                <th class="p-3">Pernyataan</th>
+                                <th class="p-3 text-center w-20">Benar</th>
+                                <th class="p-3 text-center w-20">Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+            `;
+
+            qData.statements.forEach(st => {
+                const val = userAnswersObj[st.id] || "";
+                tableHtml += `
+                    <tr>
+                        <td class="p-3 font-medium text-slate-800">${st.text}</td>
+                        <td class="p-3 text-center bg-slate-50/50">
+                            <input type="radio" name="${st.id}" value="Benar" ${val === 'Benar' ? 'checked' : ''} 
+                                onchange="saveTableTFAnswer(${qData.id}, '${st.id}', 'Benar')"
+                                class="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                        </td>
+                        <td class="p-3 text-center bg-slate-50/50">
+                            <input type="radio" name="${st.id}" value="Salah" ${val === 'Salah' ? 'checked' : ''} 
+                                onchange="saveTableTFAnswer(${qData.id}, '${st.id}', 'Salah')"
+                                class="w-4 h-4 text-rose-600 border-slate-300 focus:ring-blue-500">
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableHtml += `</tbody></table></div>`;
+            container.innerHTML = tableHtml;
+        }
+
+        /* ==================== ANSWER SAVING LOGIC ==================== */
+        function saveSingleAnswer(qId, val) {
+            userAnswers[qId] = val;
+            loadQuestion(currentQuestionIndex);
+        }
+
+        function saveMultipleAnswer(qId, optId, isChecked) {
+            let list = userAnswers[qId] || [];
+            if (isChecked) {
+                if (!list.includes(optId)) list.push(optId);
+            } else {
+                list = list.filter(id => id !== optId);
+            }
+            userAnswers[qId] = list;
+            loadQuestion(currentQuestionIndex);
+        }
+
+        function saveTableTFAnswer(qId, stId, val) {
+            if (!userAnswers[qId]) userAnswers[qId] = {};
+            userAnswers[qId][stId] = val;
+            loadQuestion(currentQuestionIndex);
+        }
+
+        /* ==================== NAVIGATION LOGIC ==================== */
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < quizData.length - 1) {
+                loadQuestion(currentQuestionIndex + 1);
+            }
+        }
+
+        function renderQuestionNav() {
+            const grid = document.getElementById('grid-nav-numbers');
+            grid.innerHTML = '';
+            
+            quizData.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.id = `nav-btn-${idx}`;
+                btn.onclick = () => loadQuestion(idx);
+                btn.className = `h-9 rounded-lg font-bold text-xs md:text-sm border transition flex items-center justify-center`;
+                btn.innerText = idx + 1;
+                grid.appendChild(btn);
+            });
+        }
+
+        function updateQuestionNavHighlight() {
+            quizData.forEach((q, idx) => {
+                const btn = document.getElementById(`nav-btn-${idx}`);
+                const isAnswered = checkIsAnswered(q.id);
+                const isCurrent = idx === currentQuestionIndex;
+
+                let classes = "h-9 rounded-lg font-bold text-xs md:text-sm border transition flex items-center justify-center ";
+                if (isCurrent) {
+                    classes += "bg-blue-600 text-white border-blue-700 ring-2 ring-blue-400 shadow ";
+                } else if (isAnswered) {
+                    classes += "bg-emerald-50 text-emerald-700 border-emerald-300 font-bold ";
+                } else {
+                    classes += "bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 ";
+                }
+                btn.className = classes;
+            });
+        }
+
+        function checkIsAnswered(qId) {
+            const ans = userAnswers[qId];
+            if (!ans) return false;
+            if (Array.isArray(ans)) return ans.length > 0;
+            if (typeof ans === 'object') return Object.keys(ans).length === 3; // For Question 6 (3 statements)
+            return true;
+        }
+
+        function updateProgressBar() {
+            let answeredCount = 0;
+            quizData.forEach(q => {
+                if (checkIsAnswered(q.id)) answeredCount++;
+            });
+
+            const percent = Math.round((answeredCount / quizData.length) * 100);
+            document.getElementById('progress-bar-fill').style.width = `${percent}%`;
+            document.getElementById('progress-percent').innerText = `${percent}%`;
+        }
+
+        function toggleMobileStimulus() {
+            const stimulusBox = document.getElementById('stimulus-container');
+            const btnText = document.getElementById('btn-text-stimulus');
+            
+            if (stimulusBox.classList.contains('hidden')) {
+                stimulusBox.classList.remove('hidden');
+                stimulusBox.classList.add('block');
+                btnText.innerText = "Tutup Wacana";
+            } else {
+                stimulusBox.classList.add('hidden');
+                stimulusBox.classList.remove('block');
+                btnText.innerText = "Buka Wacana";
+            }
+        }
+
+        /* ==================== SUBMISSION & SCORING ==================== */
+        function confirmSubmitQuiz() {
+            const unanswered = quizData.filter(q => !checkIsAnswered(q.id)).length;
+            if (unanswered > 0) {
+                if (!confirm(`Masih ada ${unanswered} soal yang belum dijawab. Yakin ingin mengirimkan jawaban sekarang?`)) {
+                    return;
+                }
+            } else {
+                if (!confirm('Apakah Anda yakin ingin menyelesaikan ujian dan mengirimkan jawaban?')) {
+                    return;
+                }
+            }
+
+            calculateAndShowResult();
+        }
+
+        function calculateAndShowResult() {
+            stopTimer();
+
+            let score = 0;
+            let correctCount = 0;
+            let wrongCount = 0;
+
+            quizData.forEach(q => {
+                const userAns = userAnswers[q.id];
+                let isCorrect = false;
+
+                if (q.type === 'single') {
+                    if (userAns === q.correctAnswer) isCorrect = true;
+                } else if (q.type === 'multiple') {
+                    if (Array.isArray(userAns)) {
+                        const sortedUser = [...userAns].sort();
+                        const sortedKey = [...q.correctAnswer].sort();
+                        if (JSON.stringify(sortedUser) === JSON.stringify(sortedKey)) isCorrect = true;
+                    }
+                } else if (q.type === 'table_tf') {
+                    if (userAns && typeof userAns === 'object') {
+                        let matchAll = true;
+                        for (let stKey in q.correctAnswer) {
+                            if (userAns[stKey] !== q.correctAnswer[stKey]) matchAll = false;
+                        }
+                        if (matchAll) isCorrect = true;
+                    }
+                }
+
+                if (isCorrect) {
+                    score += 10; // 10 points per question = Total 100
+                    correctCount++;
+                } else {
+                    wrongCount++;
+                }
+            });
+
+            // Format Elapsed Time
+            const mins = Math.floor(elapsedSeconds / 60);
+            const secs = elapsedSeconds % 60;
+            const timeFormatted = `${mins} mnt ${secs} det`;
+
+            // Display Results
+            document.getElementById('result-name').innerText = participantName;
+            document.getElementById('result-score').innerText = score;
+            document.getElementById('stat-correct').innerText = correctCount;
+            document.getElementById('stat-wrong').innerText = wrongCount;
+            document.getElementById('stat-time').innerText = timeFormatted;
+
+            // Feedback Text
+            let feedback = "";
+            if (score >= 90) feedback = "Luar Biasa! Pemahaman membaca dan literasi Anda sangat sempurna! 🌟";
+            else if (score >= 70) feedback = "Hasil Bagus! Anda menguasai sebagian besar materi wacana. 👍";
+            else if (score >= 50) feedback = "Cukup Baik! Pelajari kembali penjelasan untuk meningkatkan nilai. 📚";
+            else feedback = "Tetap Semangat! Baca wacana dengan lebih teliti saat latihan. 💪";
+            document.getElementById('result-feedback').innerText = feedback;
+
+            // Render Explanations
+            renderReviewList();
+
+            // Save to Leaderboard
+            saveToLeaderboard(participantName, score, timeFormatted, elapsedSeconds);
+
+            // Switch Screen
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('header-quiz-meta').classList.add('hidden');
+            document.getElementById('screen-result').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* ==================== REVIEW / EXPLANATIONS ==================== */
+        function renderReviewList() {
+            const container = document.getElementById('review-list-container');
+            container.innerHTML = '';
+
+            quizData.forEach((q, idx) => {
+                const userAns = userAnswers[q.id];
+                let isCorrect = false;
+
+                if (q.type === 'single') {
+                    if (userAns === q.correctAnswer) isCorrect = true;
+                } else if (q.type === 'multiple') {
+                    if (Array.isArray(userAns)) {
+                        const sortedUser = [...userAns].sort();
+                        const sortedKey = [...q.correctAnswer].sort();
+                        if (JSON.stringify(sortedUser) === JSON.stringify(sortedKey)) isCorrect = true;
+                    }
+                } else if (q.type === 'table_tf') {
+                    if (userAns && typeof userAns === 'object') {
+                        let matchAll = true;
+                        for (let stKey in q.correctAnswer) {
+                            if (userAns[stKey] !== q.correctAnswer[stKey]) matchAll = false;
+                        }
+                        if (matchAll) isCorrect = true;
+                    }
+                }
+
+                const card = document.createElement('div');
+                card.className = `p-5 rounded-2xl border ${isCorrect ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'} space-y-3`;
+
+                // Badge Status Header
+                let statusBadge = isCorrect 
+                    ? `<span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center"><svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> BENAR (+10)</span>`
+                    : `<span class="bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center"><svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> SALAH (0)</span>`;
+
+                let answerComparisonText = getFormattedAnswerText(q, userAns);
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between gap-2 border-b border-slate-200/60 pb-2">
+                        <span class="font-bold text-slate-800 text-sm">Soal Nomor ${idx + 1} (${q.typeLabel})</span>
+                        ${statusBadge}
+                    </div>
+                    <div class="text-slate-900 font-semibold text-sm md:text-base">${q.question}</div>
+                    
+                    <div class="text-xs md:text-sm bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+                        ${answerComparisonText}
+                    </div>
+
+                    <div class="bg-blue-50/80 border border-blue-200 p-3.5 rounded-xl text-xs md:text-sm text-slate-800 space-y-1">
+                        <p class="font-bold text-blue-900 flex items-center">
+                            <svg class="w-4 h-4 mr-1 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Pembahasan:
+                        </p>
+                        <p class="leading-relaxed text-slate-700">${q.explanation}</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function getFormattedAnswerText(q, userAns) {
+            if (q.type === 'single') {
+                const userKey = userAns || "Tidak dijawab";
+                const keyOpt = q.options.find(o => o.key === q.correctAnswer);
+                const userOpt = q.options.find(o => o.key === userKey);
+                return `
+                    <p><span class="font-semibold text-slate-500">Jawaban Anda:</span> <span class="${userKey === q.correctAnswer ? 'text-emerald-700 font-bold' : 'text-rose-600 font-bold'}">${userKey}. ${userOpt ? userOpt.text : 'Belum Dijawab'}</span></p>
+                    <p><span class="font-semibold text-slate-500">Kunci Jawaban:</span> <span class="text-blue-700 font-bold">${q.correctAnswer}. ${keyOpt ? keyOpt.text : ''}</span></p>
+                `;
+            } else if (q.type === 'multiple') {
+                const userArr = userAns || [];
+                const userTexts = userArr.map(id => {
+                    const found = q.options.find(o => o.id === id);
+                    return found ? found.text : id;
+                }).join(', ');
+
+                const keyTexts = q.correctAnswer.map(id => {
+                    const found = q.options.find(o => o.id === id);
+                    return found ? found.text : id;
+                }).join(', ');
+
+                return `
+                    <p><span class="font-semibold text-slate-500">Jawaban Anda:</span> <span class="font-medium">${userTexts || 'Tidak dijawab'}</span></p>
+                    <p><span class="font-semibold text-slate-500">Kunci Jawaban:</span> <span class="text-blue-700 font-bold">${keyTexts}</span></p>
+                `;
+            } else if (q.type === 'table_tf') {
+                const userObj = userAns || {};
+                let userSummary = [];
+                let keySummary = [];
+
+                q.statements.forEach((st, i) => {
+                    userSummary.push(`S${i+1}: ${userObj[st.id] || '-'}`);
+                    keySummary.push(`S${i+1}: ${q.correctAnswer[st.id]}`);
+                });
+
+                return `
+                    <p><span class="font-semibold text-slate-500">Jawaban Anda:</span> <span class="font-medium">${userSummary.join(' | ')}</span></p>
+                    <p><span class="font-semibold text-slate-500">Kunci Jawaban:</span> <span class="text-blue-700 font-bold">${keySummary.join(' | ')}</span></p>
+                `;
+            }
+        }
+
+        /* ==================== LEADERBOARD (LOCALSTORAGE) ==================== */
+        const LEADERBOARD_KEY = "tka_diy_indonesia_leaderboard";
+
+        function saveToLeaderboard(name, score, timeStr, timeSecs) {
+            let leaderboard = JSON.parse(localStorage.getItem(LEADERBOARD_KEY)) || [];
+            
+            const newEntry = {
+                id: Date.now(),
+                name: name,
+                score: score,
+                timeStr: timeStr,
+                timeSecs: timeSecs,
+                date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+            };
+
+            leaderboard.push(newEntry);
+            
+            // Sort by Score descending, then by timeSecs ascending
+            leaderboard.sort((a, b) => b.score - a.score || a.timeSecs - b.timeSecs);
+            
+            // Keep top 20 entries
+            leaderboard = leaderboard.slice(0, 20);
+
+            localStorage.setItem(LEADERBOARD_KEY, JSON.stringify(leaderboard));
+        }
+
+        function showLeaderboardScreen() {
+            document.getElementById('screen-welcome').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('header-quiz-meta').classList.add('hidden');
+            document.getElementById('screen-leaderboard').classList.remove('hidden');
+
+            renderLeaderboardTable();
+        }
+
+        function renderLeaderboardTable() {
+            const leaderboard = JSON.parse(localStorage.getItem(LEADERBOARD_KEY)) || [];
+            const tbody = document.getElementById('leaderboard-table-body');
+            const emptyMsg = document.getElementById('leaderboard-empty');
+
+            tbody.innerHTML = '';
+
+            if (leaderboard.length === 0) {
+                emptyMsg.classList.remove('hidden');
+                return;
+            } else {
+                emptyMsg.classList.add('hidden');
+            }
+
+            leaderboard.forEach((entry, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index < 3 ? 'bg-amber-50/40 font-semibold' : 'hover:bg-slate-50';
+
+                let rankBadge = `<span class="font-bold text-slate-700">#${index + 1}</span>`;
+                if (index === 0) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 bg-amber-400 text-slate-900 rounded-full font-black text-xs shadow">🥇 1</span>`;
+                else if (index === 1) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 bg-slate-300 text-slate-900 rounded-full font-black text-xs shadow">🥈 2</span>`;
+                else if (index === 2) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 bg-amber-700 text-white rounded-full font-black text-xs shadow">🥉 3</span>`;
+
+                tr.innerHTML = `
+                    <td class="py-3 px-4">${rankBadge}</td>
+                    <td class="py-3 px-4 font-bold text-slate-900">${escapeHtml(entry.name)}</td>
+                    <td class="py-3 px-4 text-center font-black text-blue-700">${entry.score}</td>
+                    <td class="py-3 px-4 text-center text-xs text-slate-600">${entry.timeStr}</td>
+                    <td class="py-3 px-4 text-right text-xs text-slate-400">${entry.date}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function clearLeaderboard() {
+            if (confirm("Apakah Anda yakin ingin menghapus seluruh riwayat daftar peringkat?")) {
+                localStorage.removeItem(LEADERBOARD_KEY);
+                renderLeaderboardTable();
+            }
+        }
+
+        function showWelcomeScreen() {
+            document.getElementById('screen-leaderboard').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-result').classList.add('hidden');
+            document.getElementById('header-quiz-meta').classList.add('hidden');
+            document.getElementById('screen-welcome').classList.remove('hidden');
+        }
+
+        function resetAndRestart() {
+            showWelcomeScreen();
+            document.getElementById('input-name').focus();
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
